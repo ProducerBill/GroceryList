@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useSessionStorage from "./Components/useSessionStorage";
 import "./App.css";
 
@@ -128,6 +128,14 @@ function FormAddItem({ onSubmit, onCancel }) {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
 
+  //Creating the ref to pull focus
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    //Focus on input
+    inputRef.current.focus();
+  }, []);
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -167,6 +175,7 @@ function FormAddItem({ onSubmit, onCancel }) {
             value={name}
             placeholder="Enter Name..."
             onChange={(e) => setName(e.target.value)}
+            ref={inputRef}
           />
         </div>
         <div>
