@@ -36,3 +36,87 @@
     transform: rotate(360deg);
   }
 }
+
+.app {
+  background-color: antiquewhite;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.grocerylist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top; /* Aligns content horizontally */
+  align-items: center; /* Aligns content vertically */
+  /* height: 100vh; Example: sets container height to full viewport height */
+}
+
+.grocerylist ul {
+  background-color: #f1c669;
+  border-radius: 10px 10px;
+  padding: 10px;
+}
+
+.grocery-add-form {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.grocery-add-form > div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(153, 185, 241);
+  padding: 10px;
+  border-radius: 10px 10px;
+}
+
+.grocery-add-form form {
+}
+
+.grocery-add-form div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
+.grocery-add-form input {
+  margin-left: 5px;
+}
+
+.item {
+  display: inline-flex;
+  width: 100%;
+}
+
+.item p {
+  width: 15rem;
+  padding: 0px;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+.item button {
+  margin: 0.1rem;
+}
+
+ul {
+  list-style-type: none;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.list-control > button {
+  margin: 10px;
+}
+
+.complete {
+  text-decoration: line-through;
+}
